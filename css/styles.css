@@ -1,7 +1,19 @@
+/* common */
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 a {
@@ -11,6 +23,34 @@ a {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: flex;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -23,6 +63,11 @@ ol {
   color: #4d5ae5;
 }
 
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
 .header-logo-part {
   color: #2e2f42;
 }
@@ -31,19 +76,36 @@ ol {
   color: #f4f4fd;
 }
 
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .header-nav-link {
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+}
+
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-contacts {
   font-style: normal;
+  margin-left: auto;
 }
 
 .header-contacts-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -57,8 +119,11 @@ ol {
   color: #404bbf;
 }
 
+/* hero section */
+
 .hero-section {
   background-color: #2e2f42;
+  height: 600px;
 }
 
 .hero-title {
@@ -67,6 +132,9 @@ ol {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  width: 496px;
+  padding-top: 188px;
+  margin: 0 auto 0 auto;
 }
 
 .hero-btn {
@@ -77,12 +145,34 @@ ol {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
+  display: block;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  height: 56px;
+  width: 169px;
+  margin: 48px auto 0 auto;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
+}
+
+/* benefits section */
+
+.benefits-container {
+  height: 344px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+  padding-top: 120px;
+}
+
+.benefits-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .benefits-item-title {
@@ -91,6 +181,7 @@ ol {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .benefits-item-text {
@@ -100,8 +191,11 @@ ol {
   letter-spacing: 0.02em;
 }
 
+/* team section */
+
 .team-section {
   background-color: #f4f4fd;
+  height: 732px;
 }
 
 .team-title {
@@ -111,10 +205,22 @@ ol {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-top: 120px;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-item {
   background-color: #ffffff;
+  height: 380px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  width: calc((100% - 72px) / 4);
 }
 
 .team-item-title {
@@ -124,14 +230,18 @@ ol {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-top: 32px;
 }
 
-.team-title-text {
+.team-item-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-top: 8px;
 }
+
+/* portfolio section */
 
 .portfolio-title {
   font-size: 36px;
@@ -140,6 +250,22 @@ ol {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  margin: 120px 0 72px 0;
+}
+
+.porftolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.porftolio-item {
+  width: calc((100% - 48px) / 3);
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  overflow: hidden;
 }
 
 .portfolio-item-title {
@@ -148,16 +274,27 @@ ol {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  padding-left: 16px;
 }
 
 .portfolio-item-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 8px 0 32px 16px;
 }
+
+/* footer */
 
 .page-footer {
   background-color: #2e2f42;
+}
+
+.footer-logo {
+  display: flex;
+  margin-top: 120px;
+  padding: 100px 0 16px 0;
 }
 
 .footer-slogan {
@@ -165,4 +302,6 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
+  padding-bottom: 100px;
 }
