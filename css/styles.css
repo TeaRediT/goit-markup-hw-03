@@ -146,7 +146,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto 0 auto;
 }
 
@@ -310,7 +310,7 @@ img {
 }
 
 .footer-logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
